@@ -1,0 +1,14 @@
+map ctrl+c copy_to_clipboard
+map ctrl+v paste_from_clipboard
+font_size 11
+font_family MesloLGS NF
+
+allow_remote_control yes
+
+window_padding_width 10
+
+
+# BEGIN_KITTY_THEME
+# Xcodedark
+include current-theme.conf
+# END_KITTY_THEME
