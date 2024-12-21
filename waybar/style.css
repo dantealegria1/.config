@@ -1,256 +1,99 @@
-/* Keyframes */
+@define-color bg0       rgba(0, 0, 0, 0.4); /* Unified background for the entire bar */
+@define-color fg0       #fbf1c7;
+@define-color accent1   #bdae93;
+@define-color accent2   #d5c4a1;
+@define-color warning   #fabd2f;
+@define-color critical  #fb4934;
 
-@keyframes blink-critical {
-	to {
-		/*color: @white;*/
-		background-color: @critical;
-	}
-}
-@define-color black #000000;
-@define-color color1 #1a1a1a;
-@define-color color2 #333333;
-@define-color color3 #4d4d4d;
-@define-color color4 #666666;
-@define-color color5 #808080;
-@define-color color6 #999999;
-@define-color white #ffffff;
-@define-color color8 #b3b3b3;
-@define-color color9 #cccccc;
-@define-color color10 #e6e6e6;
-@define-color color11 #f2f2f2;
-@define-color color12 #d9d9d9;
-@define-color color13 #e0e0e0;
-@define-color color14 #f7f7f7;
-@define-color color15 #ffffff;
-
-@define-color critical @color1;
-@define-color mode @black;
-@define-color unfocused @color8;
-@define-color focused @color6;
-@define-color inactive @color2;
-@define-color sound @color5;
-@define-color network @color8;
-@define-color memory @color6;
-@define-color cpu @color1;
-@define-color temp @color2;
-@define-color layout @color3;
-@define-color battery @color6;
-@define-color date @black;
-@define-color time @white;
-
-
-/* Reset all styles */
 * {
-	border: none;
-	border-radius: 0;
-	min-height: 0;
-	margin: 0;
-	padding: 0;
-	box-shadow: none;
-	text-shadow: none;
-	icon-shadow: none;
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-size: 15px;
+    min-height: 20px;
 }
 
-/* The whole bar */
-#waybar {
-	background: rgba(40, 40, 40, 0.5); /* #282828e0 */
-	color: @white;
-	font-family: JetBrainsMono Nerd Font, Siji;
-	font-size: 10pt;
-	font-weight: bold;
+window#waybar {
+    color: @fg0;
+    background-color: @bg0;
+    transition: background-color 0.5s;
+    margin: 20px 0px;
+    padding: 0px;
 }
 
-/* Each module */
+#waybar.top {
+    background: none;
+}
+#waybar.top > box.horizontal {
+    background: @bg0;
+    box-shadow: 0 0 4pt #11111b;
+    border-radius: 12pt;
+    margin: 6pt;
+    padding: 2pt;
+}
+
+#workspaces button {
+    background-color: transparent; /* Transparent so it blends with the unified background */
+    color: @fg0;
+    margin: 0; /* Remove margin to maintain continuity */
+    padding: 2px 5px; /* Padding for button text spacing */
+    border-radius: 0; /* No border radius for continuity */
+    transition: all 0.3s ease;
+}
+
+#workspaces button.active {
+    color: #83a598;
+}
+
+#workspaces button:hover {
+    background-color: @accent2;
+    color: #83a598;
+}
+
 #battery,
 #clock,
 #cpu,
-#language,
 #memory,
-#mode,
 #network,
 #pulseaudio,
-#temperature,
-#tray,
-#backlight,
-#idle_inhibitor,
-#disk,
-#user,
-#mpris {
-	padding-left: 8pt;
-	padding-right: 8pt;
-}
-
-/* Each critical module */
+#custom-temperature,
+#language,
+#window,
 #mode,
-#memory.critical,
-#cpu.critical,
-#temperature.critical,
-#battery.critical.discharging {
-	animation-timing-function: linear;
-	animation-iteration-count: infinite;
-	animation-direction: alternate;
-	animation-name: blink-critical;
-	animation-duration: 1s;
+#tray {
+    background-color: transparent; /* Transparent for the unified look */
+    color: @fg0;
+    margin: 0; /* No margin for seamless integration */
+    padding: 5px 10px; /* Adjust padding for content spacing */
+    border-radius: 0; /* Remove border radius for continuity */
 }
 
-/* Each warning */
-#network.disconnected,
-#memory.warning,
+#battery.warning,
 #cpu.warning,
-#temperature.warning,
-#battery.warning.discharging {
-	color: @warning;
+#memory.warning {
+    color: @warning;
 }
 
-/* And now modules themselves in their respective order */
-
-/* Current sway mode (resize etc) */
-#mode {
-	color: @white;
-	background: @mode;
-}
-
-/* Workspaces stuff */
-#workspaces button {
-	/*font-weight: bold;*/
-	padding-left: 2pt;
-	padding-right: 2pt;
-	color: @black;
-	background: @unfocused;
-}
-
-/* Inactive (on unfocused output) */
-#workspaces button.visible {
-	color: @white;
-	background: @inactive;
-}
-
-/* Active (on focused output) */
-#workspaces button.focused {
-	color: @black;
-	background: @focused;
-}
-
-/* Contains an urgent window */
-#workspaces button.urgent {
-	color: @black;
-	background: @warning;
-}
-
-/* Style when cursor is on the button */
-#workspaces button:hover {
-	background: @black;
-	color: @white;
-}
-
-#window {
-	margin-right: 35pt;
-	margin-left: 35pt;
-}
-
-#pulseaudio {
-	background: @sound;
-	color: @black;
+#battery.critical,
+#cpu.critical,
+#memory.critical {
+    color: @critical;
 }
 
 #network {
-	background: @network;
-	color: @black;
+    color: @accent2;
 }
 
-#memory {
-	background: @memory;
-	color: @black;
+#network.disconnected {
+    color: @critical;
 }
 
-#cpu {
-	background: @cpu;
-	color: @white;
+#pulseaudio {
+    color: @accent1;
 }
 
-#temperature {
-	background: @temp;
-	color: @white;
+#pulseaudio.muted {
+    color: @critical;
 }
+
 #custom-temperature {
-  background: @temp;
-  color: @white;
-}
-
-#language {
-	background: @layout;
-	color: @black;
-}
-
-#battery {
-	background: @battery;
-	color: @black;
-}
-
-#tray {
-	background: @date;
-}
-
-#clock.date {
-	background: @date;
-	color: @white;
-}
-
-#clock.time {
-	background: @time;
-	color: @black;
-}
-
-#custom-arrow1 {
-	font-size: 11pt;
-	color: @time;
-	background: @date;
-}
-
-#custom-arrow2 {
-	font-size: 11pt;
-	color: @date;
-	background: @battery;
-}
-
-#custom-arrow4 {
-	font-size: 11pt;
-	color: @battery;
-	background: @temp;
-}
-
-#custom-arrow5 {
-	font-size: 11pt;
-	color: @temp;
-	background: @cpu;
-}
-
-#custom-arrow6 {
-	font-size: 11pt;
-	color: @cpu;
-	background: @memory;
-}
-
-#custom-arrow7 {
-	font-size: 11pt;
-	color: @memory;
-	background: @network;
-}
-
-#custom-arrow8 {
-	font-size: 11pt;
-	color: @network;
-	background: @sound;
-}
-
-#custom-arrow9 {
-	font-size: 11pt;
-	color: @sound;
-	background: transparent;
-}
-
-#custom-arrow10 {
-	font-size: 11pt;
-	color: @unfocused;
-	background: transparent;
+    color: @warning;
 }

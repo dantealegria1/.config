@@ -1,0 +1,22 @@
+set adjust-open best-fit  # Automatically fit the document to the screen
+set recolor true          # Enable recoloring for night mode
+set recolor-keephue true  # Keep hues when recoloring
+set recolor-darkcolor "#000000"  # Background color in recolored mode
+set recolor-lightcolor "#FFFFFF"  # Text color in recolored mode
+set statusbar-h-padding 2 # Adjust padding for better aesthetics
+set statusbar-v-padding 1
+
+map <Space> scroll down  # Scroll down by a page
+map <Shift-Space> scroll up
+map j scroll down        # Vim-style navigation
+map k scroll up
+map l scroll right
+map h scroll left
+map gg navigate start    # Jump to the beginning of the document
+map G navigate end       # Jump to the end of the document
+map b navigate back
+map f navigate forward
+
+set search-case sensitive  # Search is case-sensitive
+set highlight-transparency 0.3  # Adjust transparency of search highlights
+

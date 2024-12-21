@@ -60,7 +60,7 @@ mainbox {
 imagebox {
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/Downloads/sky.png", height);
+    background-image:            url("~/Downloads/paz.jpg", height);
     orientation:                 vertical;
     children:                    [ "inputbar", "dummy", "mode-switcher" ];
 }

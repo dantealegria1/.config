@@ -5,28 +5,19 @@
 	"modules-left": [
 		"hyprland/mode",
 		"hyprland/workspaces",
-		"custom/arrow10",
 		"hyprland/window"
 	],
 
 	"modules-right": [
-		"custom/arrow9",
-		"pulseaudio",
-		"custom/arrow8",
-		"network",
-		"custom/arrow7",
-		"memory",
-		"custom/arrow6",
-		"cpu",
-		"custom/arrow5",
-		"custom/temperature",
-		"custom/arrow4",
-		"battery",
 
+		"pulseaudio",
+		"network",
+		"memory",
+		"cpu",
+		"custom/temperature",
+		"battery",
 		"sway/language",
-		"custom/arrow2",
 		"clock#date",
-		"custom/arrow1",
 		"clock#time"
 	],
 

@@ -15,14 +15,13 @@ configuration {
 /*****----- Global Properties -----*****/
 * {
     font:                        "JetBrains Mono Nerd Font 10";
-    background:                  #2D1B14;
-    background-alt:              #462D23;
+    background:                  #101010;
+    background-alt:              #252525;
     foreground:                  #FFFFFF;
-    selected:                    #E25F3E;
-    active:                      #716251;
-    urgent:                      #934A1C;
+    selected:                    #505050;
+    active:                      #909090;
+    urgent:                      #707070;
 }
-
 /*
 USE_BUTTONS=YES
 */
@@ -57,7 +56,7 @@ imagebox {
     spacing:                     20px;
     padding:                     20px;
     background-color:            transparent;
-    background-image:            url("~/Downloads/sky.png", height);
+    background-image:            url("~/Downloads/paz.jpg", height);
     children:                    [ "inputbar", "dummy", "message" ];
 }
 
@@ -68,7 +67,7 @@ userimage {
     border-radius:               10px;
     border-color:                @background-alt;
     background-color:            transparent;
-    background-image:            url("~/Downloads/sky.png", height);
+    background-image:            url("~/Downloads/new.jpg", height);
 }
 
 /*****----- Inputbar -----*****/

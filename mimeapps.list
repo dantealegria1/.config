@@ -1,0 +1,5 @@
+[Added Associations]
+application/pdf=zathura-2.desktop;zathura.desktop;zen-browser-2.desktop;zen-browser.desktop;
+
+[Default Applications]
+application/pdf=zathura-2.desktop;
