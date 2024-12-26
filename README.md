@@ -3,9 +3,10 @@
 Personal configuration files for my Arch Linux setup, including window managers, development tools, and system utilities.
 
 ![image](https://github.com/user-attachments/assets/32670f23-2861-4352-9df6-8afddc6bfc65)
-![image](https://github.com/user-attachments/assets/f97c30cb-e9cd-42af-b133-9ad8460d8879)
+![image](https://github.com/user-attachments/assets/218f7860-b378-4d32-8b01-ebb1e9c29e88)
 ![image](https://github.com/user-attachments/assets/b93af6c2-3e1e-43f7-be4d-fc767f669c39)
-![image](https://github.com/user-attachments/assets/17c26e81-d1f9-4618-895d-77d3167ce164)
+![image](https://github.com/user-attachments/assets/11df11da-2d8c-4660-9bac-3807cf446307)
+
 
 
 
