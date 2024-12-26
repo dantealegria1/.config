@@ -1,2 +1,4 @@
 [EmbedSettings]
 embed-application/pdf=false
+embed-text/html=false
+embed-text/javascript=false
